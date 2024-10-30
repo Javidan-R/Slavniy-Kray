@@ -125,6 +125,12 @@ a {
 	font-weight: bold;
 	padding: 0.8rem 5rem;
 	font-size: larger;
+	border-radius: 10px;
+	outline: none;
+}
+.info-section .btn-outline:hover {
+	background-color: rgb(41, 148, 41);
+	color: #ffffff;	
 }
 .info-socials {
 	position: relative;
@@ -246,18 +252,9 @@ a {
 	text-align: center; /* Center list items */
 }
 
-/* Default Styles */
-.contact-socials button,
-.contact-socials a {
-    color: white; /* Default color for button and icons */
-}
 
-/* Responsive Styles */
-@media (max-width: 576px) {
-    .contact-socials button,
-    .contact-socials a {
-        color: black; /* Change color to black on small screens */
-    }
+.contact-socials .btn-outline {
+	border: 2px solid #ffffff !important;	
 }
 
 
@@ -371,6 +368,10 @@ a {
 	.contact-section h2 {
 		font-size: 1.5rem;
 	}
+	.contact-socials .btn-outline {
+		border: 2px solid #000000 !important;	
+	}
+	
 }
 
 @media (max-width: 576px) {
