@@ -1,0 +1,427 @@
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400; /* Normal font weight for general text */
+	color: #333;
+	background-color: #f9f9f9;
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+}
+section{
+    padding: 20px 50px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Header */
+.header {
+	height: 100vh;
+	display: flex;
+	position: relative; /* Added for child absolute positioning */
+	flex-direction: row;
+}
+
+.half-section {
+	flex: 1 1 50%; /* Allow sections to flex */
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	min-height: 50vh;
+	overflow: hidden; /* Ensures children do not overflow */
+}
+
+.left-section {
+	background: url('../img/mainpage/left_background.webp') no-repeat center
+		center / cover;
+}
+
+.right-section {
+	background: url('../img/mainpage/right_backgorund.webp') no-repeat center
+		center / cover;
+}
+
+.left-section::before,
+.right-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+	z-index: 1; /* For visibility */
+	transition: opacity 0.3s;
+	pointer-events: none; /* Prevents overlay from blocking interactions */
+}
+
+.left-section:hover::before,
+.right-section:hover::before {
+	opacity: 0; /* Remove overlay on hover */
+}
+
+.left-section img,
+.right-section img {
+	position: relative;
+	z-index: 2; /* Ensure images appear above overlay */
+	max-width: 100%; /* Responsive image scaling */
+	height: auto; /* Maintain aspect ratio */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.position-relative {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-success,
+.btn-warning {
+	font-weight: bold;
+	padding: 10px 20px;
+}
+
+/* Info Section */
+.info-section {
+	background-image: url('../img/mainpage/Vector.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #333;
+	height: 100vh;
+	display: flex; /* Flexbox for alignment */
+	flex-direction: column;
+	justify-content: flex-start; /* Center content vertically */
+	padding-top: 40px !important;
+}
+
+.info-button {
+	border-color: #fff !important;
+	padding: 0.8rem 5rem;
+	border-radius: 10px;
+}
+
+.info-text {
+	font-size: 22px;
+	text-align: justify;
+}
+
+.info-section .btn-outline {
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	font-weight: bold;
+	padding: 0.8rem 5rem;
+	font-size: larger;
+}
+.info-socials {
+	position: relative;
+	bottom: 0px;
+	left: 60px;
+	width: 100px !important; /* Maximum width to prevent overflow */
+	width: auto; /* Use auto width to adapt to content */
+	display: flex; /* Ensures items are displayed in a row */
+	justify-content: center; /* Center the icons */
+	flex-wrap: wrap; /* Allow wrapping for responsiveness */
+	margin: 0 auto; /* Center the container */
+}
+
+/* Social Icons */
+.social-icons a {
+	border: 2px solid #555;
+	border-radius: 50%;
+	padding: 5px;
+	transition: all 0.3s;
+	color: #333;
+	font-size: 1.5rem;
+	margin-left: 15px;
+}
+
+.social-icons a:hover {
+	background-color: #555;
+	color: #fff;
+}
+
+/* Product Section */
+.product-section {
+	background-color: #fcf9f9;
+	display: flex; /* Flexbox for layout */
+	flex-direction: column;
+	align-items: center; /* Center contents */
+    justify-content: space-between;
+}
+
+.product-card {
+	background: transparent;
+	border-radius: 8px;
+	position: relative;
+	bottom: 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center card contents */
+	justify-content: flex-start;
+    height: 40dvh;
+    text-align: left;
+}
+
+.product-info {
+	background-color: #e7e7e7;
+	text-align: left !important;
+	width: 100%; /* Full width for product info */
+}
+
+.product-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.product-img {
+	border: 10px solid white;
+	border-radius: 100%;
+	outline-color: #fff;
+	max-width: 100%; /* Responsive image */
+	height: auto; /* Maintain aspect ratio */
+	position: relative;
+	bottom: 1rem;
+}
+
+.list-unstyled {
+	list-style: disc;
+	margin-bottom: 10px;
+    text-align: left !important;
+}
+/* Contact Section */
+.contact-vector {
+	background-image: url('../img/mainpage/Vector(3).svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh !important; /* Full height */
+	clip-path: inset(0 0 40% 0); /* Hide half of the bottom */
+	position: relative; /* Added for stacking context */
+	top: 100px;
+}
+
+.contact-section {
+	background-image: url('../img/mainpage/Vector(2).svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	bottom: 340px;
+	display: flex; /* Flexbox for layout */
+	flex-direction: column; /* Vertical layout */
+	align-items: center; /* Center content */
+}
+.contact-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 50px;
+}
+.contact-section h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center; /* Center text */
+}
+
+.contact-section ul li {
+	font-size: 1.2rem;
+	margin: 10px 0;
+	text-align: center; /* Center list items */
+}
+
+/* Default Styles */
+.contact-socials button,
+.contact-socials a {
+    color: white; /* Default color for button and icons */
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    .contact-socials button,
+    .contact-socials a {
+        color: black; /* Change color to black on small screens */
+    }
+}
+
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+	.info-text {
+		font-size: 1rem;
+	}
+	.product-title {
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 992px) {
+	.header {
+		flex-direction: column;
+	}
+	/* Info Section */
+	.info-section {
+		height: 85vh;
+	}
+	.info-section .btn-outline {
+		border-color: #fff !important;
+		padding: 0.5rem 2rem;
+		border-radius: 10px;
+	}
+	.info-socials {
+		bottom: 90px;
+		left: 60px;
+		width: 80%; /* Limit width on smaller screens */
+		justify-content: center; /* Space items evenly */
+	}
+
+	.half-section {
+		flex: 1 1 100%; /* Full width on small screens */
+		min-height: 50vh;
+	}
+	.info-text {
+		font-size: 1.1rem;
+	}
+	.product-card {
+		position: relative;
+		bottom: 1rem;
+        height: 80dvh;
+        justify-content: center;
+
+	}
+
+    
+	.product-img {
+		max-width: 100%; /* Responsive image */
+		height: auto; /* Maintain aspect ratio */
+		position: relative;
+		top: 5rem;
+
+	}
+	.product-title {
+		font-size: 1.4rem;
+	}
+    .contact-row{
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .info-section {
+		height: 95vh;
+	}
+    .product-card {
+		top: 10rem;
+        height: 80dvh;
+        justify-content: center;
+
+	}
+	.product-img {
+		max-width: 100%; /* Responsive image */
+		height: auto; /* Maintain aspect ratio */
+		position: relative;
+        bottom: 2rem;
+	}
+	.info-section {
+		height: 90vh;
+		padding: 30px 15px;
+	}
+	.info-section .btn-outline {
+		border-color: #fff !important;
+		padding: 0.5rem 2rem;
+		border-radius: 10px;
+	}
+
+	.info-socials {
+		position: relative;
+		bottom: 90px;
+		left: 60px;
+	}
+	.info-text {
+		font-size: 1rem;
+	}
+    .contact-vector {
+        clip-path: inset(0 0 23% 0); /* Hide half of the bottom */
+        top: 100px;
+    }
+    
+.contact-section {
+	bottom: 200px;
+	
+}
+
+	.contact-section h2 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.overlay {
+		font-size: 1.2rem;
+	}
+	.btn-success,
+	.btn-warning {
+		padding: 8px 15px;
+		font-size: 0.9rem;
+	}
+	.info-text {
+		font-size: 0.9rem;
+	}
+	.product-title {
+		font-size: 1.2rem;
+	}
+	.contact-section h2 {
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 420px) {
+	.overlay {
+		padding: 15px;
+		font-size: 1rem;
+	}
+	.btn-success,
+	.btn-warning {
+		padding: 6px 12px;
+		font-size: 0.8rem;
+	}
+	.info-text,
+	.product-title {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 350px) {
+	.info-section {
+		padding: 20px 10px;
+	}
+	.contact-section h2 {
+		font-size: 1.2rem;
+	}
+}
+
+/* Additional adjustments for ultra-small screens */
+@media (max-width: 320px) {
+	.overlay {
+		font-size: 0.9rem;
+	}
+	.btn-success,
+	.btn-warning {
+		padding: 5px 10px;
+		font-size: 0.7rem;
+	}
+	.info-text,
+	.product-title {
+		font-size: 0.7rem;
+	}
+	.contact-section ul li {
+		font-size: 1rem;
+	}
+}
