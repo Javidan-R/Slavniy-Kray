@@ -81,7 +81,18 @@ a {
 .btn-warning {
 	font-weight: bold;
 	padding: 10px 20px;
+
 }
+.btn-success a{
+	text-decoration: none;
+	color: #fff;
+}
+.btn-warning a {
+	text-decoration: none;
+	color: #000;
+}
+
+
 
 /* Info Section */
 .info-section {
