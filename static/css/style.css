@@ -354,7 +354,7 @@ img {
 		position: relative;
 	}
 	.info-section {
-		height: 55vh;
+		height: 58vh;
 		padding: 30px 15px;
 	}
 	.info-section .btn-outline {
@@ -369,7 +369,7 @@ img {
 		left: 60px;
 	}
 	.info-text {
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 	.contact-vector {
 		clip-path: inset(0 0 23% 0); /* Hide half of the bottom */
@@ -398,67 +398,129 @@ img {
 		border: 2px solid #000000 !important;
 	}
 }
+@media (max-width: 560px) {
+    .header {
+        flex-direction: column; /* Stack header elements */
+    }
+    
+    .info-section {
+        height: 58vh; /* Reduce height for smaller screens */
+        padding: 20px 10px; /* Adjust padding */
+    }
 
-@media (max-width: 576px) {
-	.overlay {
-		font-size: 1.2rem;
-	}
-	.btn-success,
-	.btn-warning {
-		padding: 8px 15px;
-		font-size: 0.9rem;
-	}
-	.info-text {
-		font-size: 0.9rem;
-	}
-	.product-title {
-		font-size: 1.2rem;
-	}
-	.contact-section h2 {
-		font-size: 1.3rem;
-	}
+    .info-text {
+        font-size: 1rem; /* Smaller font for text */
+        line-height: 1.4; /* Improve readability */
+    }
+
+    .product-card {
+        height: auto; /* Allow card to adjust height */
+        margin-top: 30px; /* Add spacing */
+    }
+
+    .product-title {
+        font-size: 1.2rem; /* Reduce font size */
+    }
+
+    .product-info {
+        padding: 10px; /* Add padding */
+    }
+
+    .contact-vector {
+        clip-path: inset(0 0 20% 0); /* Adjust clip path */
+        height: 300px; /* Fixed height */
+    }
+
+    .contact-section {
+        padding: 20px; /* Add padding */
+        top: -150px; /* Adjust position */
+    }
+
+    .contact-row {
+        flex-direction: column; /* Stack contact items */
+        padding: 0 10px; /* Reduce padding */
+    }
+
+    .contact-section h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .contact-section ul li {
+        font-size: 1rem; /* Adjust list item font size */
+        margin: 5px 0; /* Reduced margin */
+    }
+
+    .info-socials {
+        justify-content: center; /* Center social icons */
+        bottom: 50px; /* Adjust position */
+    }
+
+    .social-icons a {
+        font-size: 1.3rem; /* Adjust icon size */
+        padding: 4px; /* Reduce padding */
+    }
 }
 
+/* Further adjustments for screens less than 420px */
 @media (max-width: 420px) {
-	.overlay {
-		padding: 15px;
-		font-size: 1rem;
-	}
-	.btn-success,
-	.btn-warning {
-		padding: 6px 12px;
-		font-size: 0.8rem;
-	}
-	.info-text,
-	.product-title {
-		font-size: 0.8rem;
-	}
-}
+    .overlay {
+        padding: 10px; /* Reduce padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
 
-@media (max-width: 350px) {
-	.info-section {
-		padding: 20px 10px;
-	}
-	.contact-section h2 {
-		font-size: 1.2rem;
-	}
+    .btn-success,
+    .btn-warning {
+        padding: 5px 10px; /* Smaller buttons */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .info-text,
+    .product-title {
+        font-size: 0.9rem; /* Adjust font sizes */
+    }
+
+    .contact-section h2 {
+        font-size: 1.2rem; /* Adjust heading */
+    }
+
+    .product-info {
+        padding: 5px; /* Less padding */
+    }
+
+    .product-img {
+        border: 5px solid white; /* Adjust border size */
+        border-radius: 50%; /* Maintain circular shape */
+    }
+
+    .contact-row {
+        padding: 0 5px; /* Reduced padding */
+        align-items: center; /* Center items */
+    }
+
+    .info-button {
+        padding: 0.5rem 2rem; /* Adjust button size */
+        font-size: 0.9rem; /* Smaller font */
+    }
 }
 
 /* Additional adjustments for ultra-small screens */
 @media (max-width: 320px) {
-	.overlay {
-		font-size: 0.9rem;
-	}
-	.btn-success,
-	.btn-warning {
-		padding: 5px 10px;
-		font-size: 0.7rem;
-	}
-	.info-text,
-	.product-title {
-		font-size: 0.7rem;
-	}
-	.contact-section ul li {
-		font-size: 1rem;
-	}
+    .overlay {
+        font-size: 0.8rem; /* Adjust overlay font size */
+    }
+    
+    .btn-success,
+    .btn-warning {
+        padding: 4px 8px; /* Further reduce button size */
+        font-size: 0.7rem; /* Smaller font size */
+    }
+
+    .info-text,
+    .product-title {
+        font-size: 0.8rem; /* Reduce font size */
+    }
+
+    .contact-section ul li {
+        font-size: 0.9rem; /* Adjust list item size */
+    }
 }
