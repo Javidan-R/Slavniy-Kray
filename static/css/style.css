@@ -56,7 +56,7 @@ img {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
 	z-index: 1; /* For visibility */
-	transition: opacity 0.3s;
+	transition: opacity 0.7s;
 	pointer-events: none; /* Prevents overlay from blocking interactions */
 }
 
@@ -65,8 +65,7 @@ img {
 	opacity: 0; /* Remove overlay on hover */
 }
 
-.left-section img,
-.right-section img {
+.left-section img {
 	position: relative;
 	z-index: 2; /* Ensure images appear above overlay */
 	max-width: 100%; /* Responsive image scaling */
@@ -76,6 +75,17 @@ img {
 	align-items: center;
 }
 
+.right-section img {
+	position: relative;
+	z-index: 2; /* Ensure images appear above overlay */
+	max-width: 45%; /* Responsive image scaling */
+	margin: 0 auto;
+	height: auto; /* Maintain aspect ratio */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 50px;
+}
 .position-relative {
 	display: flex;
 	justify-content: center;
@@ -278,6 +288,16 @@ img {
 	.header {
 		flex-direction: column;
 	}
+	
+	.left-section img {
+		max-width: 70%;
+		margin: 0 auto;
+	}
+.right-section img {
+	max-width: 30%; /* Responsive image scaling */
+	bottom: 20px;
+	margin-bottom: 20px;
+}
 	/* Info Section */
 	.info-section {
 		height: 65vh;
@@ -346,7 +366,7 @@ img {
 	}
 	.product-info iframe{
 		width: auto;
-		height: 320px;
+		height: 300px;
 	}
 	.product-img {
 		max-width: 100%; /* Responsive image */
