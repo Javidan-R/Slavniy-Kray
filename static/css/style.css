@@ -335,21 +335,18 @@ img {
 	section {
 		padding: 0;
 	}
-	.info-section {
-		height: 95vh;
-	}
 	.product-card {
 		height: auto;
 		justify-content: center;
+		margin-top: 60px;
 	}
 	.product-img {
 		max-width: 100%; /* Responsive image */
 		height: auto; /* Maintain aspect ratio */
 		position: relative;
-		bottom: 2rem;
 	}
 	.info-section {
-		height: 45vh;
+		height: 55vh;
 		padding: 30px 15px;
 	}
 	.info-section .btn-outline {
@@ -373,8 +370,7 @@ img {
 	}
 
 	.contact-section {
-		bottom: 50px;
-		top: -100px;
+		top: -200px;
 	}
 	.contact-row {
 		flex-direction: column;
