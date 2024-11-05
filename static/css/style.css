@@ -46,7 +46,7 @@ img {
 		center / cover;
 }
 
-.left-section::before,
+/* .left-section::before,
 .right-section::before {
 	content: '';
 	position: absolute;
@@ -54,16 +54,16 @@ img {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-	z-index: 1; /* For visibility */
+	background-color: rgba(0, 0, 0, 0.5); 
+	z-index: 1; 
 	transition: opacity 0.7s;
-	pointer-events: none; /* Prevents overlay from blocking interactions */
+	pointer-events: none; 
 }
 
 .left-section:hover::before,
 .right-section:hover::before {
-	opacity: 0; /* Remove overlay on hover */
-}
+	opacity: 0; 
+} */
 
 .left-section img {
 	position: relative;
